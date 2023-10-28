@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorra</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img class="header__logo" src="img/logo.png" alt="" srcset="">
+        <nav class="header__nav">
+            <ul class="header__navegation">
+                <li><a href=""><img src="img/home-2.png" alt=""></a></li>
+                <li><a href=""><img src="img/correo-electronico.png" alt=""></a></li>
+                <li><a href=""><img src="img/corazon.png" alt=""></a></li>
+                <li><a href=""><img src="img/usuario.png" alt=""></a></li>
+                <li><a href=""><img src="img/configuraciones.png" alt=""></a></li>
+                <li><a href=""><img src="img/pregunta.png" alt=""></a></li>
+            </ul>
+        </nav>
+        <img class="header__logo" src="img/salida.png" alt="">
+    </header>
+
+        <main class="cotizar">
+            <section class="cotizar__mostrar">
+                <header class="cotizar__header">
+                    <form action="">
+                        <input class="cotizar__search" id="search" type="search" placeholder="Search">
+                        </input>
+                        <select  class="cotizar__time" id="time"></select>
+                    </form>
+                </header>
+                <div class="cotizar__container">
+                    <div class="cotizar__wallet" id="wallet">
+                        <h1 class="cotizar__title">Balance</h1>
+                        <h3 id="restante"></h3>                        
+                        <div id="presupuesto" class="cotizar__presupuesto">
+                            <p>Presupuesto: $ <span id="saldo"></span> </p>                            
+                            <p>Gastos: $ <span id="gastos"></span></p>
+                        </div>
+                    </div>
+                    <div class="cotizar__cards">
+                        <img src="img/credit.png" alt="credit card">
+                        <img src="img/credit-metamask.png" alt="credit cart metamsk" >
+                    </div>                
+                </div>
+
+                <div class="cotizar__active">
+                    <div class="cotizar__form">
+                        <h2 class="cotizar__title-gastos">Añade <span> tus gastos</span></h2>
+                            <form id="agregar-gasto" action="#">
+                                <div class="form-group">
+                                    <select name="" id="tipo">
+                                        <option value="0">Categoria</option>
+                                        <option value="mercado">Mercado</option>
+                                        <option value="diversion">Diversion</option>
+                                        <option value="educacion">Educacion</option>
+                                        <option value="hogar">Hogar</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="" id="nombre" placeholder="Nombre Gasto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cantidad">Cantidad</label>
+                                    <input type="text" class="" id="cantidad" placeholder="Cantidad en $">
+                                </div>
+    
+                                <button type="submit" class="cotizar__btn-agregar">Agregar</button>
+                            </form>    
+                    </div>                     
+                    <div class="">
+                        <div class="">    
+                            <h2 class="cotizar__title-gastos">Lista <span>de Gastos</span></h2>    
+                            <div id="gastos">
+                                <ul class="">
+
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                </div> 
+            </section>
+            <section class="cotizar__add">
+                <div class="add__container">                    
+                    <img class="add__img" src="img/imagen-add.png" alt="" srcset="">
+                    <button class="add__btn" onclick="togglePresupuesto()"><span>+</span>Agregar fondos</button>
+
+                    <div class="agregar-fondos">
+                        <span><img onclick="togglePresupuesto()" class="agregar-fondos__close" src="img/cancelar.png" alt="Cerrar"></span>
+                        <h3>Agrega Fondos</h3>
+                        <form class="" id="form-add" action="">
+                            <input id="add" type="number" placeholder="Agrega fondos">
+                            <button type="submit" class="">Agregar</button>
+                        </form>
+                    </div>
+
+                    <h2 class="add__title">Categoria</h2>
+
+                    <div class="add__categoria bg-red">
+                        <img src="img/carrito-de-compras.png" alt="" srcset="">
+                        <h4>Mercado</h4>
+                        <p id="tipo-mercado"></p>
+                    </div>
+
+                    <div class="add__categoria">
+                        <img src="img/videojuego.png" alt="" srcset="">
+                        <h4>Diversion</h4>
+                        <p id="tipo-diversion"></p>
+                    </div>
+
+                    <div class="add__categoria bg-green">
+                        <img src="img/educacion.png" alt="" srcset="">
+                        <h4>Educacion</h4>
+                        <p id="tipo-educacion"></p>
+                    </div>
+
+                    <div class="add__categoria bg-hogar">
+                        <img src="img/home.png" alt="" srcset="">
+                        <h4>Hogar</h4>
+                        <p id="tipo-hogar"></p>
+                    </div>
+
+                    <div class="add__david">
+                        <h4>DavidCode</h4>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
